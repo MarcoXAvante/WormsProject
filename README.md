@@ -1,4 +1,4 @@
-# Pinball Game Physics II
+# Worms Game
 [Main Github page](https://github.com/MarcoXAvante/WormsProject)
 
 # **Members**:
