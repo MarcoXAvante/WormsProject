@@ -26,10 +26,12 @@
 
 - SPACE: Shoot
 
-- Right/Left Arrow: Change velocity of the ball
-
-- Up/Down Arrow: Change angle of the cannon
+- F1: Enable/Disable Debug
 
 - F2: Change mode
 
 - F3: Collision type
+
+- F4: Enable/Disable Aerodynamics
+
+- F5: Enable/Disable Hydrodynamics
