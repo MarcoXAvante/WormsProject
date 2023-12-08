@@ -59,6 +59,8 @@ bool ModuleSceneIntro::Start()
 
 	App->renderer->camera.x = App->renderer->camera.y = 0;
 	texture = App->textures->Load("Assets/Background.png");
+	winScientist = App->textures->Load("Assets/win-scientist.png");
+	winZombie = App->textures->Load("Assets/win-zombie.png");
 	texScientist = App->textures->Load("Assets/Scientist.png");
 	texZombie = App->textures->Load("Assets/Zombie.png");
 
@@ -275,21 +277,21 @@ update_status ModuleSceneIntro::Update()
 	if (turn) {
 		if (SDL_HasIntersection(&bola->area, &zombie) && !hit) {
 			hit = true;
-			zombieHP -= 1;
+			zombieHP--;
 		}
 	}
 	else {
 		if (SDL_HasIntersection(&bola->area, &scientist) && !hit) {
 			hit = true;
-			scientistHP -= 1;
+			scientistHP--;
 		}
 	}
 
-	if (scientistHP == 0) {
-
+	if (scientistHP < 1) {
+		App->renderer->Blit(winZombie, (SCREEN_WIDTH / 2) - 300, SCREEN_HEIGHT / 2);
 	}
-	else if (zombieHP == 0) {
-
+	else if (zombieHP < 1) {
+		App->renderer->Blit(winScientist, (SCREEN_WIDTH/2) - 300, SCREEN_HEIGHT/2);
 	}
 
 	App->renderer->BlitDX(texScientist, scientist.x, scientist.y, flipScientist, &currentAnimation->GetCurrentFrame());

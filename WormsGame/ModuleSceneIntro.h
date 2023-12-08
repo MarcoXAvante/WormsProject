@@ -60,6 +60,8 @@ public:
 	SDL_Texture * texture;
 	SDL_Texture * texScientist;
 	SDL_Texture* texZombie;
+	SDL_Texture * winScientist;
+	SDL_Texture * winZombie;
 	Animation idleScientist;
 	Animation walkScientist;
 	Animation attackScientist;
