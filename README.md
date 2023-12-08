@@ -24,6 +24,8 @@
 
 - D: Move Left
 
+- Aim with your mouse position
+
 - SPACE: Shoot
 
 - F1: Enable/Disable Debug
