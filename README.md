@@ -28,6 +28,8 @@
 
 - SPACE: Shoot
 
+- R: Skip Turn
+
 - F1: Enable/Disable Debug
 
 - F2: Change mode
